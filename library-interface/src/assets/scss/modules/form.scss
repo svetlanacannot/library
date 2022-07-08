@@ -4,7 +4,35 @@
     background-color: rgba(255, 255, 255, 0.88);
     border-radius: 30px;
     max-height: 60vh;
-    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__inner{
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex: 1;
+        margin-bottom: 15px;
+        
+
+        &::-webkit-scrollbar {
+            width: 30px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: #471C16;   
+            border-left: 14px solid transparent;
+            border-right: 14px solid transparent;
+            background-clip: padding-box;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: #471C16;
+            border-radius: 1000px;
+            border: 10px solid transparent;
+            background-clip: padding-box;
+        }
+    }
 
     &__title{
         font-size: 2.5rem;

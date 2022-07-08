@@ -1,0 +1,56 @@
+.userbooks{
+    border: 1px solid #000;
+    margin: 40px 40px 40px 50px;
+    &__list{
+        
+        padding: 40px;
+    }
+
+    &__title{
+        font-size: 2.3rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    &__book{
+        display: list-item;
+        max-width: 350px;
+        margin-bottom: 25px;
+        font-size: 2.5rem;
+        margin-left: 25px;
+    }
+
+    &__num{
+        font-size: 2rem;
+        margin-right: 10px;
+    }
+
+    &__main{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-left: 10px;
+    }
+
+    &__txt{
+        font-size: 2.3rem;
+        margin-bottom: 7px;
+    }
+
+    &__footer{
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    &__btn{
+        padding: 7px 25px;
+    }
+
+    &__date{
+        font-weight: 300;
+        text-align: right;
+        flex: 1;
+    }
+}

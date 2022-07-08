@@ -41,9 +41,42 @@
         }
     }
 
+    &__choise{
+        color: #fff;
+        font-weight: 600;
+        font-size: 2rem;
+        position: relative;
+    }
+
+    &__arrow{
+        width: 20px;
+        height: auto;
+        margin-left: 10px;
+    }
+
+    &__list{
+        position: absolute;
+        bottom: -750%;
+        background-color: #fff;
+        color: #000;
+        font-weight: 400;
+        padding: 15px;
+        border: 1px solid #000;
+        display: none;
+
+        div{
+            margin-bottom: 5px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
     &__profile{
         display: flex;
         align-items: center;
+        position: relative;
     }
 
     &__name{
@@ -56,5 +89,29 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
+    }
+
+    &__nav{
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        bottom: -130%;
+        padding: 15px;
+        border: 1px solid #000;
+        display: none;
+    }
+
+    &__item{
+        font-size: 1.6rem;
+        display: block;
+        padding-bottom: 5px;
+
+        &:last-child{
+            padding-bottom: 0;
+        }
+
+        &:hover{
+            font-weight: 600;
+        }
     }
 }

@@ -1,0 +1,32 @@
+.user{
+    display: flex;
+    padding-bottom: 40px;
+    padding-top: 40px;
+
+    border-bottom: 1px solid #000;
+
+    &:last-child{
+        border: none;
+    }
+
+    &__photo{
+        width: 250px;
+    }
+
+    &__txt{
+        margin-left: 20px;
+    }
+
+    &__fio{
+        font-weight: 600;
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    &__info{
+        font-size: 1.6rem;
+        p{
+            margin-bottom: 5px;
+        }
+    }
+}

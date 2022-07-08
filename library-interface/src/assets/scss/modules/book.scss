@@ -4,6 +4,16 @@
     padding-bottom: 40px;
     border-bottom: 1px solid #000;
     margin-top: 40px;
+
+    &:last-of-type{
+        border-bottom: none;
+    }
+
+    &:first-of-type{
+        margin-top: 0;
+    }
+
+    
     
     &__img{
         width: 200px;
@@ -15,6 +25,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        &:first-of-type{
+            justify-self: start;
+        }
 
         &:last-child{
             min-width: 170px;

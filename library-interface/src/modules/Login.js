@@ -10,33 +10,26 @@ const Login = () => {
   const loginRef = useRef()
   const passRef = useRef()
 
-  const [formData, setFormData] = useState({})
   const [shouldRedirect, setShouldRedirect] = useState(false)
 
-  useEffect(()=>{
-    if(formData !== {}){
-        axios({
-          method: 'post',
-          url: `http://library/library-api/login.php`,
-          headers: { 'content-type': 'application/json' },
-          data: formData
-        }).then(result => {
-          if(result.data){
-            setShouldRedirect(true)
-            auth.login(result.data.id, result.data.name, result.data.role, result.data.photo)
-          }
-        })
-
-        loginRef.current.value = null
-        passRef.current.value = null
-    }
-  }, [formData])
-
   const loginBtnClickHandle = () => {
-    setFormData({
-      login: loginRef.current.value,
-      pass: passRef.current.value
+    axios({
+      method: 'post',
+      url: `http://library/library-api/login.php`,
+      headers: { 'content-type': 'application/json' },
+      data: {
+        login: loginRef.current.value,
+        pass: passRef.current.value
+      }
+    }).then(result => {
+      if(result.data){
+        setShouldRedirect(true)
+        auth.login(result.data)
+      }
     })
+
+    loginRef.current.value = null
+    passRef.current.value = null
   }
 
   return (
@@ -46,7 +39,7 @@ const Login = () => {
         <FormField label='Логин' type="text" inputRef={loginRef}/>
         <FormField label='Пароль' type="password" inputRef={passRef}/>
         <div className='form__btns'>
-            <button onClick={loginBtnClickHandle} type="button" className='form__btn btn btn--brown'>Войти</button>
+            <button onClick={()=>{loginBtnClickHandle()}} type="button" className='form__btn btn btn--brown'>Войти</button>
             <Link to='signup' className='form__btn btn btn--beige'>Регистрация</Link>
         </div>
       </Form>

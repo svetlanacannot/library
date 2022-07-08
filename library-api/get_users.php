@@ -3,17 +3,17 @@
 require 'dbconnect.php';
 require 'headers.php';
 
-$sql = "SELECT * FROM books WHERE (num > 0)";
+$sql = "SELECT * FROM users";
 $result = mysqli_query($conn, $sql);
 $arr = array();
 while($row = mysqli_fetch_array($result)) {
  $arr[] = [
     'name' => $row['name'],
-    'author' => $row['author'],
-    'descr' => $row['description'],
+    'surname' => $row['surname'],
+    'patronymic' => $row['patronymic'],
     'photo' => $row['photo'],
-    'num' => $row['num'],
-    'ebook' => $row['ebook'],
+    'phone' => $row['phone'],
+    'email' => $row['email'],
     'id' => $row['id']
  ];
 }

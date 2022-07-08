@@ -1,0 +1,44 @@
+.profile{
+    &__inner{
+        margin-top: 40px;
+        display: flex;
+        align-self: start;
+    }
+
+    &__img{
+        max-width: 300px;
+        align-self: start;
+    }
+
+    &__main{
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__fio{
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    &__info{
+        font-size: 2rem;
+
+        p{
+            margin-bottom: 5px;
+
+            &:last-of-type{
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__btn{
+        padding: 10px 40px;
+        font-size: 2.5rem;
+        display: block;
+        align-self: start;
+    }
+}

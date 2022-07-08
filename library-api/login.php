@@ -16,8 +16,13 @@ if($login != null && $pass != null){
         echo json_encode([
             'id' => $row['id'],
             'name' => $row['name'],
+            'surname' => $row['surname'],
+            'patronymic' => $row['patronymic'],
             'role' => $row['role'],
-            'photo' => $row['photo']
+            'photo' => $row['photo'],
+            'date' => $row['date'],
+            'email' => $row['email'],
+            'phone' => $row['phone']
         ]);
     }
 }
